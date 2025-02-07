@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useMyHackContext } from '@/context'; 
 import { useUser } from "@clerk/nextjs";
 import { useEffect } from "react";
+import ThreeDModel from "@/components/ThreeDModel";
 
 
 
@@ -17,11 +18,7 @@ export default function Home() {
   return (
       <div>
           <Navbar/>
-          {/* {MyUserData ? (
-              <p>Welcome {MyUserData.fname}!</p>
-          ) : (
-              <p>Loading user data...</p>
-          )} */}
+          <ThreeDModel/>
       </div>
   );
 }

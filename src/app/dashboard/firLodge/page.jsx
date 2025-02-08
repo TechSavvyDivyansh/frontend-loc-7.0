@@ -3,9 +3,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import MyInputs from "@/components/MyInputs";
+
 import AddWitnessPopup from "@/components/AddWitnessPopup";
 import { Button } from "@/components/ui/button";
+import LeftForm from "@/components/firLodgeComponent/LeftForm";
 
 const schema = z.object({
   place: z.string().min(3, "Place must be at least 3 characters long"),
@@ -56,51 +57,32 @@ export default function page() {
       <div className="flex gap-3 mb-7">
         <Button
           variant="outline"
-          className="bg-transparent text-[#383838] border-[#383838]"
+          className="bg-transparent text-[#cecdcd] border-[#414141]"
         >
           Zero FIR
         </Button>
         <Button
           variant="outline"
-          className="bg-transparent text-[#383838] border-[#383838]"
+          className="bg-transparent text-[#cecdcd] border-[#414141]"
         >
           Regular FIR
         </Button>
       </div>
-      <div className="outerBubble bg-[#292828] p-10 rounded-xl w-[50vw] h-[75vh]">
+
+
+      <div className="outerBubbleLeft bg-[#292828] p-10 rounded-xl w-[50vw] h-[75vh]">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-4"
         >
-          <div className="flex flex-col justify-between ">
-            <p className="text-[#b1b1b1] mx-2">Crime Description</p>
-            <p></p>
-            <MyInputs
-              type="textarea"
-              placeholder="Description"
-              register={register}
-              name="description"
-              errors={errors.description}
-              control={control} // Pass control
-              styles=" rounded-xl h-[15vh] bg-[#383838]"
-            />
-          </div>
-
-          <div className="">
-            <MyInputs
-                label="Crime Act"
-                type="text"
-                placeholder="Act"
-                register={register}
-                name="description"
-                errors={errors.description}
-                control={control} // Pass control
-                styles=" rounded-xl w-[40%] bg-[#383838]"
-                />
-          </div>
+          <LeftForm register={register} errors={errors} control={control}/>
 
         </form>
       </div>
+      <div className="rightBubble">
+
+      </div>
+
       {/* <AddWitnessPopup/> */}
     </div>
   );

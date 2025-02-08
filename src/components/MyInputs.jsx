@@ -11,9 +11,15 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox"
 import { Textarea } from "@/components/ui/textarea"
+import { Calendar } from "@/components/ui/calendar"
+
 
 
 export default function MyInputs({ label, type, placeholder, register, name, errors, options, control ,styles}) {
+
+  const [date, setDate] = React.useState(new Date())
+
+
   if (type === "text" || type === "email" || type === "password" || type === "number" || type === "tel") {
     return (
       <div className="flex flex-col space-y-1">
@@ -61,6 +67,20 @@ export default function MyInputs({ label, type, placeholder, register, name, err
         {errors && <p className="text-red-500">{errors.message}</p>}
       </div>
     );
+  }
+
+  if(type=="date")
+  {
+    return(
+      <div>
+            <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        className="rounded-md border"
+      />
+      </div>
+    )
   }
 
   if (type === "checkbox") {

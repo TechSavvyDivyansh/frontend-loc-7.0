@@ -10,14 +10,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox"
+import { Textarea } from "@/components/ui/textarea"
 
 
-export default function MyInputs({ label, type, placeholder, register, name, errors, options, control }) {
+export default function MyInputs({ label, type, placeholder, register, name, errors, options, control ,styles}) {
   if (type === "text" || type === "email" || type === "password" || type === "number" || type === "tel") {
     return (
       <div className="flex flex-col space-y-1">
-        {label && <label className="text-white">{label}</label>}
-        <Input type={type} placeholder={placeholder} {...register(name)} className="border p-2 rounded-lg w-[350px]" />
+        {label && <label className="text-[#b1b1b1] mx-3 my-2">{label}</label>}
+        <Input type={type} placeholder={placeholder} {...register(name)} className={`border p-5 rounded-2xl bg-[#000000] h-[50px] ${styles}`} />
         {errors && <p className="text-red-500">{errors.message}</p>}
       </div>
     );
@@ -77,8 +78,10 @@ export default function MyInputs({ label, type, placeholder, register, name, err
 
   if(type==="textarea"){
     return(
-      <div>
-        
+      <div> 
+          {label && <label className="text-[#b1b1b1] mx-2">{label}</label>}
+          <Textarea placeholder={placeholder} className={`my-3 ${styles}`}/>
+          {errors && <p className="text-red-500">{errors.message}</p>}
       </div>
     )
   }

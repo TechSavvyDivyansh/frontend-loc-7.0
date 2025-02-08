@@ -12,13 +12,13 @@ export default function Sidebar() {
             
         </div>
         <div className="tabs flex flex-col gap-11">
-            <Link href="/dashboard/firLodge" className='flex gap-10 items-center p-4 px-5 bg-[#161616] text-[#5f5f5f] rounded-lg text-lg'><CreateIcon/>FIR Lodge</Link>
-            <Link href="/dashboard/MyCases" className='flex gap-10 items-center p-4 px-5  text-[#5f5f5f] rounded-lg text-lg'><ArticleRoundedIcon/>Cases under me</Link>
-            <Link href="/dashboard/Alerts" className='flex gap-10 items-center p-4 px-5  text-[#5f5f5f] rounded-lg text-lg'><NotificationsActiveRoundedIcon/>Alerts</Link>
-            <Link href="/dashboard/Analytics" className='flex gap-10 items-center p-4 px-5  text-[#5f5f5f] rounded-lg text-lg'><LeaderboardRoundedIcon/>Analytics</Link>
+            <Link href="/dashboard/firLodge" className='flex gap-10 items-center p-4 px-5 bg-[#161616] text-[#e0e0e0] rounded-lg text-md'><CreateIcon/>FIR Lodge</Link>
+            <Link href="/dashboard/MyCases" className='flex gap-10 items-center p-4 px-5  text-[#e0e0e0] rounded-lg text-md'><ArticleRoundedIcon/>Cases under me</Link>
+            <Link href="/dashboard/Alerts" className='flex gap-10 items-center p-4 px-5  text-[#e0e0e0] rounded-lg text-md'><NotificationsActiveRoundedIcon/>Alerts</Link>
+            <Link href="/dashboard/Analytics" className='flex gap-10 items-center p-4 px-5  text-[#e0e0e0] rounded-lg text-md'><LeaderboardRoundedIcon/>Analytics</Link>
         </div>
         <div className="logout">
-            <p className='text-[#5f5f5f] text-lg text-center'>Logout</p>
+            <p className='text-[#e0e0e0] text-lg text-center'>Logout</p>
         </div>
     </div>
   )

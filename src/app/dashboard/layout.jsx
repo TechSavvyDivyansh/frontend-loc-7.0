@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
       </aside>
 
       {/* Main Content */}
-      <main className="w-[85vw] p-10 m-5 rounded-3xl bg-[#161616]">
+      <main className="w-[85vw] p-12 m-5 mt-20 rounded-3xl bg-[#161616]">
         {children}
       </main>
     </div>

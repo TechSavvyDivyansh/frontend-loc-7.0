@@ -74,6 +74,14 @@ export default function MyInputs({ label, type, placeholder, register, name, err
       </div>
     );
   }
+
+  if(type==="textarea"){
+    return(
+      <div>
+        
+      </div>
+    )
+  }
   
 
   if (type === "radio") {
